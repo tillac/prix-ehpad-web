@@ -6,4 +6,6 @@ This repo contains the web files necessary to feed the web map demo :
 + The general page is built with Quarto
 + All the interactive side is built in JavaScript
 
+Files are automatically updated throught a Github Actions from another repository (private).
+
 Please contact us (contact@tillac-data.com) if you want some more info or have a business need related to interactive mapping and cartography.
