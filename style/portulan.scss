@@ -1,0 +1,217 @@
+/*-- scss:defaults --*/
+
+//
+// Color system
+//
+
+$white: #f7f7f7 !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #373a3c !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$blue: #121947 !default;
+$indigo: #194689 !default;
+$purple: #ad314c !default;
+$pink: #40214a !default;
+$red: #ff0039 !default;
+$orange: #f0ad4e !default;
+$yellow: #ffc273 !default;
+$green: #3fb618 !default;
+$teal: #20c997 !default;
+$cyan: #55a9cd !default;
+
+$primary: $blue !default;
+$secondary: $gray-800 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $purple !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+$min-contrast-ratio: 2.6 !default;
+
+// Spacing
+$spacer: 1rem !default;
+
+// Options
+
+$enable-rounded: false !default;
+
+// Body
+
+$body-color: $gray-800 !default;
+
+// Fonts
+
+$font-family-sans-serif: "Figtree", sans-serif !default;
+$font-family-header: "Alegreya" !default;
+$headings-font-weight: 400 !default;
+$header-font-weight: 900 !default;
+
+// Navbar
+
+$navbar-dark-hover-color: rgba($white, 1) !default;
+$navbar-light-hover-color: rgba($black, .9) !default;
+
+/*-- scss:rules --*/
+
+
+// Variables
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;700;900&display=swap" !default;
+
+@if $web-font-path {
+  @import url($web-font-path);
+}
+
+$web-font-path-head: "https://fonts.googleapis.com/css2?family=Alegreya:wght@300;400;700;900&display=swap" !default;
+
+@if $web-font-path-head {
+  @import url($web-font-path-head);
+}
+
+
+// Typography
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: $font-family-header;
+  font-weight: $header-font-weight;
+}
+
+// Remove title
+h1.title {
+  display: none;
+}
+
+#title-block-header {
+  margin-block-end: 0;
+  margin-top: 0;
+}
+
+.title-block-second h1 {
+  font-size: xxx-large;
+}
+
+// Layout - sidebar
+
+.sidebar {
+  background-color: $blue;
+  color: $white;
+  padding-left: $spacer * .5;
+  padding-right: $spacer * .5;
+  /* hack ? */
+  height: 100in;
+}
+
+.sidebar h3,
+h4 {
+  font-family: $font-family-header;
+  font-weight: 700;
+}
+
+.sidebar h4 {
+  font-size: medium;
+}
+
+.sidebar ul {
+  padding-left: $spacer;
+}
+
+.sidebar a {
+  color: $white;
+}
+
+// Layout - map
+
+#map {
+  height: 70%;
+  margin-top: 2%
+}
+
+// Layout - Value boxes
+/* on ajuste les marges et tailles */
+.card h1 {
+  font-family: $font-family-sans-serif;
+}
+
+.card h1,
+h4,
+p {
+  margin-top: $spacer *.25;
+  margin-bottom: $spacer *.25;
+}
+
+.card h4 {
+  font-size: smaller !important;
+}
+
+.card p {
+  font-size: small !important;
+}
+
+.card-body {
+  padding: $spacer *.25 $spacer *.5;
+}
+
+// Legend
+label {
+  padding-left: $spacer *.25;
+  font-size: medium;
+}
+
+.legend div {
+  font-size: smaller;
+}
+
+.legend-points div span {
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  margin-right: 5px;
+  width: 15px;
+  border: solid 1px #F7FBFB;
+}
+
+input {
+  width: $spacer * .75;
+  height: $spacer * .75;
+  vertical-align: middle;
+}
+
+input[type="checkbox"] {
+  accent-color: $yellow;
+}
+
+// Popup
+.maplibregl-popup-content {
+  font-family: $font-family-sans-serif;
+  padding: $spacer * 0.5;
+  border-radius: 5px;
+}
+
+.maplibregl-popup-content h3 {
+  font-size: medium;
+  font-weight: 700;
+  margin-top: $spacer *.5;
+}
+
+.maplibregl-popup-content li {
+  font-size: small;
+}
+
+.maplibregl-popup-content ul {
+  margin-bottom: $spacer *.5;
+  padding-left: $spacer * 1.5;
+}
